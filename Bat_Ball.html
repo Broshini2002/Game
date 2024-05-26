@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Game</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        button{
+            margin-top: 50px;
+            height:80px;
+            width:100px;
+            box-shadow: 5px 5px 5px;
+            padding:15px 20px;
+            font-size: 20px;
+            border-style: none;
+            margin-left: 30px;
+            cursor: pointer;
+            
+        }
+
+       
+
+
+        
+        .cricket{
+            height:90px;
+            width: 100px;
+            margin-right: 20px;
+            margin-left: 30px;
+
+        }
+        .header{
+            display: flex; 
+            justify-content: center;
+        } 
+
+        h1{
+            margin-top: 30px;
+        }
+    </style>
+
+</head>
+<body>
+       
+
+    <div class="header">
+
+    <p class="png">
+        <img class="cricket" src="cricket.png">
+    </p>
+
+   <h1 > 𝗕𝗔𝗧 𝗕𝗔𝗟𝗟 𝗦𝗧𝗨𝗠𝗣 𝗚𝗔𝗠𝗘</h1>
+   <p class="png">
+    <img class="cricket" src="cricket.png">
+</p>
+
+</div>
+
+
+    
+
+
+   <button style="background-color: rgb(37, 210, 37);" onclick="
+   
+   // this will generate random number between 0 to 3 
+  
+   generateComputerChoice();
+
+
+   let resultMsg;
+
+   if(computerChoice === 'Ball'){
+     resultMsg=('➡️ User won  ⬅️');
+   }
+   else if(computerChoice==='Stump'){
+    resultMsg=(' ➡️  𝐂𝐨𝐦𝐩𝐮𝐭𝐞𝐫 𝐡𝐚𝐬 𝐖𝐨𝐧  ⬅️');
+
+   }
+   else if(computerChoice==='Bat'){
+    resultMsg=(` ➡️ It's a Tie ⬅️`);
+   }
+   alert(`You have chosen Bat. Computer choice is ${computerChoice} and  ${resultMsg}`);
+
+">Bat</button>
+   
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+
+   <button  style="background-color: rgb(37, 210, 37);" onclick=" 
+    generateComputerChoice();
+
+   if(computerChoice === 'Ball'){
+     resultMsg=('➡️ It is  a Tie ⬅️');
+   }
+   else if(computerChoice==='Stump'){
+    resultMsg=(' ➡️ User won  ⬅️');
+
+   }
+   else if(computerChoice==='Bat'){
+    resultMsg=(` ➡️ Computer has won ⬅️`);
+   }
+
+   alert(`You have chosen Ball. Computer choice is ${computerChoice} and  ${resultMsg}`);
+">Ball</button>
+
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+
+   <button  style="background-color: rgb(37, 210, 37);"onclick="
+
+generateComputerChoice();
+ 
+   if(computerChoice === 'Ball'){
+     resultMsg=('➡️ Comuter has won ⬅️');
+   }
+   else if(computerChoice==='Stump'){
+    resultMsg=(' ➡️ It is a Tie ⬅️');
+
+   }
+   else if(computerChoice==='Bat'){
+    resultMsg=(` ➡️ User Won ⬅️`);
+   }
+   alert(`You have chosen Stump. Computer choice is ${computerChoice} and  ${resultMsg}`) ;
+   ">Stump</button>
+
+
+
+<script>
+
+
+
+let computerChoice;
+
+
+function generateComputerChoice(){
+
+
+    let randomNumber= Math.random() *3;
+
+
+
+
+if (randomNumber > 0 && randomNumber <= 1) {
+    computerChoice='Bat';
+    //console.log('Computer Choice is Bat');
+}
+
+else if(randomNumber >1 && randomNumber<=2){
+        computerChoice='Ball';
+      //  console.log('Computer Choice is Ball');
+
+}
+else{
+      computerChoice='Stump';
+      //console.log('Computer Choice is Stump');
+}
+
+
+
+}
+
+
+  
+
+
+
+</script>
+      
+
+</body>
+</html>
